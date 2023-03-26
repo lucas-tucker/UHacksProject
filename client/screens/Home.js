@@ -6,63 +6,42 @@ import {
   Image,
   StyleSheet,
   Text,
+  ImageBackground,
+  Dimensions,
 } from "react-native";
 
 const Home = ({ navigation }) => {
+  const imageWidth = 500;
+  const imageHeight = 375;
+
   return (
     <View style={styles.container}>
-      <View style={styles.quadrant}>
+        <Text
+            style={styles.header}
+            >Student Hub
+        </Text>
+      <ImageBackground
+        style={[styles.image]}
+        source={require("../assets/UChicagoMap.webp")}
+        resizeMode={"contain"}
+      >
         <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate("Wood")}
+          style={[styles.button, { left: imageWidth * 0.3, top: imageHeight * 0.3 }]}
+          onPress={() => navigation.navigate("Cobb")}
         >
-          <Image
-            style={styles.image}
-            source={require("../assets/wood.webp")}
-            resizeMode={"contain"}
-          />
-          <Text style={styles.text}>Wood</Text>
+          <Text style={styles.text}>Cobb</Text>
         </TouchableOpacity>
-      </View>
-      <View style={styles.quadrant}>
+
         <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate("Paper")}
+          style={[styles.button, { left: imageWidth * 0.5, top: imageHeight * 0.85 }]}
+          onPress={() => navigation.navigate("Harper")}
         >
-          <Image
-            style={styles.image}
-            source={require("../assets/paper.webp")}
-            resizeMode={"contain"}
-          />
-          <Text style={styles.text}>Paper</Text>
+          <Text style={styles.text}>Harper</Text>
         </TouchableOpacity>
-      </View>
-      <View style={styles.quadrant}>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate("Metal")}
-        >
-          <Image
-            style={styles.image}
-            source={require("../assets/metal.webp")}
-            resizeMode={"contain"}
-          />
-          <Text style={styles.text}>Metal</Text>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.quadrant}>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate("Leather")}
-        >
-          <Image
-            style={styles.image}
-            source={require("../assets/leather.webp")}
-            resizeMode={"contain"}
-          />
-          <Text style={styles.text}>Leather</Text>
-        </TouchableOpacity>
-      </View>
+        
+        {/* Add more buttons here */}
+        
+      </ImageBackground>
     </View>
   );
 };
@@ -70,43 +49,94 @@ const Home = ({ navigation }) => {
 export default Home;
 
 const styles = StyleSheet.create({
+  header: {
+    color: "maroon",
+    fontWeight: "bold",
+    fontSize: 40,
+    marginLeft: "7%",
+    fontFamily: "Sans"
+  },
   container: {
-    flex: 10,
-    flexDirection: "reverse-row",
-    backgroundColor: "transparent",
-    flexWrap: "wrap",
-    justifyContent: "space-around",
-    alignItems: "bottom",
-    marginBottom: "20%",
-  },
-  quadrant: {
-    width: "50%",
-    height: "50%",
-    backgroundColor: "transparent",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  button: {
-    width: "85%",
-    height: "90%",
-    backgroundColor: "white",
-    borderRadius: 40,
-    justifyContent: "center",
-    alignItems: "center",
-    borderWidth: 1,
-    borderColor: "lightgray",
+    flex: 1,
+    height: "100%",
+    width: "130%",
   },
   image: {
-    width: "80%",
-    height: "60%",
-    maxWidth: "100%",
-    maxHeight: "100%",
+    flex: 1,
+    width: 500,
+    height: 375,
+  },
+  button: {
+    backgroundColor: "white",
+    width: 100,
+    height: 40,
+    borderRadius: 25,
+    justifyContent: "center",
+    alignItems: "center",
+    position: 'absolute'
   },
   text: {
-    fontSize: 30,
-    color: "gray",
-    textAlign: "center",
-    alignSelf: "center",
-    marginTop: 0,
+    color: "black",
+    fontWeight: "bold",
+    fontSize: 18,
+    fontFamily: "Sans"
   },
 });
+
+
+   // <View style={styles.container}>
+    //   <View style={styles.quadrant}>
+    //     <TouchableOpacity
+    //       style={styles.button}
+    //       onPress={() => navigation.navigate("Cobb")}
+    //     >
+    //       <Image
+    //         style={styles.image}
+    //         source={require("../assets/Cobb.webp")}
+    //         resizeMode={"contain"}
+    //       />
+    //       <Text style={styles.text}>Regenstein</Text>
+    //     </TouchableOpacity>
+    //   </View>
+    //   <View style={styles.quadrant}>
+    //     <TouchableOpacity
+    //       style={styles.button}
+    //       onPress={() => navigation.navigate("Paper")}
+    //     >
+    //       <Image
+    //         style={styles.image}
+    //         source={require("../assets/paper.webp")}
+    //         resizeMode={"contain"}
+    //       />
+    //       <Text style={styles.text}>Crerar</Text>
+    //     </TouchableOpacity>
+    //   </View>
+    //   <View style={styles.quadrant}>
+    //     <TouchableOpacity
+    //       style={styles.button}
+    //       onPress={() => navigation.navigate("Metal")}
+    //     >
+    //       <Image
+    //         style={styles.image}
+    //         source={require("../assets/metal.webp")}
+    //         resizeMode={"contain"}
+    //       />
+    //       <Text style={styles.text}>Baker</Text>
+    //     </TouchableOpacity>
+    //   </View>
+    //   <View style={styles.quadrant}>
+    //     <TouchableOpacity
+    //       style={styles.button}
+    //       onPress={() => navigation.navigate("Leather")}
+    //     >
+    //       <Image
+    //         style={styles.image}
+    //         source={require("../assets/leather.webp")}
+    //         resizeMode={"contain"}
+    //       />
+    //       <Text style={styles.text}>Grounds of Being</Text>
+    //     </TouchableOpacity>
+    //   </View>
+    // </View>
+
+    

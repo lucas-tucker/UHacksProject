@@ -2,10 +2,10 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 // Screens
 import Home from "../screens/Home";
-import Leather from "../screens/Leather";
+import Harper from "../screens/Harper";
 import Metal from "../screens/Metal";
 import Paper from "../screens/Paper";
-import Wood from "../screens/Wood";
+import Cobb from "../screens/Cobb";
 
 const Stack = createNativeStackNavigator();
 
@@ -17,10 +17,10 @@ const MainNav = () => {
       }}
     >
       <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Leather" component={Leather} />
+      <Stack.Screen name="Harper" component={Harper} />
       <Stack.Screen name="Metal" component={Metal} />
       <Stack.Screen name="Paper" component={Paper} />
-      <Stack.Screen name="Wood" component={Wood} />
+      <Stack.Screen name="Cobb" component={Cobb} />
     </Stack.Navigator>
   );
 };

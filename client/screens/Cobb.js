@@ -22,7 +22,7 @@ https://aboutreact.com/react-native-get-clicked-location-of-touchscreen-using-pa
 
 */
 
-const Wood = ({ navigation }) => {
+const Cobb = ({ navigation }) => {
   const [locationX, setLocationX] = useState(0);
   const [locationY, setLocationY] = useState(0);
   const [serverMessage, setServerMessage] = useState("ready to talk to server");
@@ -115,7 +115,7 @@ const Wood = ({ navigation }) => {
   );
 };
 
-export default Wood;
+export default Cobb;
 
 const styles = StyleSheet.create({
   container: {

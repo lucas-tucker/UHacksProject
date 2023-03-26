@@ -22,7 +22,7 @@ https://aboutreact.com/react-native-get-clicked-location-of-touchscreen-using-pa
 
 */
 
-const Leather = ({ navigation }) => {
+const Harper = ({ navigation }) => {
   const [locationX, setLocationX] = useState(0);
   const [locationY, setLocationY] = useState(0);
   const [serverMessage, setServerMessage] = useState("ready to talk to server");
@@ -115,7 +115,7 @@ const Leather = ({ navigation }) => {
   );
 };
 
-export default Leather;
+export default Harper;
 
 const styles = StyleSheet.create({
   container: {
