@@ -22,7 +22,7 @@ https://aboutreact.com/react-native-get-clicked-location-of-touchscreen-using-pa
 
 */
 
-const Paper = ({ navigation }) => {
+const Crerar = ({ navigation }) => {
   const [locationX, setLocationX] = useState(0);
   const [locationY, setLocationY] = useState(0);
   const [serverMessage, setServerMessage] = useState("ready to talk to server");
@@ -115,7 +115,7 @@ const Paper = ({ navigation }) => {
   );
 };
 
-export default Paper;
+export default Crerar;
 
 const styles = StyleSheet.create({
   container: {
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     width: 100,
     borderRadius: 200,
     position: "absolute",
-    backgroundColor: "#ffffee",
+    backgroundColor: "#AAA9AD",
   },
   text: {
     fontSize: 10,

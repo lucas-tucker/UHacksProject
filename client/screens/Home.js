@@ -38,6 +38,20 @@ const Home = ({ navigation }) => {
         >
           <Text style={styles.text}>Harper</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[styles.button, { left: imageWidth * 0.07, top: imageHeight * 0.7 }]}
+          onPress={() => navigation.navigate("Crerar")}
+        >
+          <Text style={styles.text}>Crerar</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[styles.button, { left: imageWidth * 0.45, top: imageHeight * 0.5 }]}
+          onPress={() => navigation.navigate("Quad")}
+        >
+          <Text style={styles.text}>Quad</Text>
+        </TouchableOpacity>
         
         {/* Add more buttons here */}
         
@@ -54,7 +68,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 40,
     marginLeft: "7%",
-    fontFamily: "Sans"
+    fontFamily: "Lobster"
   },
   container: {
     flex: 1,
@@ -79,7 +93,7 @@ const styles = StyleSheet.create({
     color: "black",
     fontWeight: "bold",
     fontSize: 18,
-    fontFamily: "Sans"
+    fontFamily: "Serif"
   },
 });
 
@@ -101,11 +115,11 @@ const styles = StyleSheet.create({
     //   <View style={styles.quadrant}>
     //     <TouchableOpacity
     //       style={styles.button}
-    //       onPress={() => navigation.navigate("Paper")}
+    //       onPress={() => navigation.navigate("Quad")}
     //     >
     //       <Image
     //         style={styles.image}
-    //         source={require("../assets/paper.webp")}
+    //         source={require("../assets/Quad.webp")}
     //         resizeMode={"contain"}
     //       />
     //       <Text style={styles.text}>Crerar</Text>
@@ -114,11 +128,11 @@ const styles = StyleSheet.create({
     //   <View style={styles.quadrant}>
     //     <TouchableOpacity
     //       style={styles.button}
-    //       onPress={() => navigation.navigate("Metal")}
+    //       onPress={() => navigation.navigate("Crerar")}
     //     >
     //       <Image
     //         style={styles.image}
-    //         source={require("../assets/metal.webp")}
+    //         source={require("../assets/Crerar.webp")}
     //         resizeMode={"contain"}
     //       />
     //       <Text style={styles.text}>Baker</Text>

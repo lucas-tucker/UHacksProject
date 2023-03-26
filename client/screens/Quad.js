@@ -22,7 +22,7 @@ https://aboutreact.com/react-native-get-clicked-location-of-touchscreen-using-pa
 
 */
 
-const Metal = ({ navigation }) => {
+const Quad = ({ navigation }) => {
   const [locationX, setLocationX] = useState(0);
   const [locationY, setLocationY] = useState(0);
   const [serverMessage, setServerMessage] = useState("ready to talk to server");
@@ -115,7 +115,7 @@ const Metal = ({ navigation }) => {
   );
 };
 
-export default Metal;
+export default Quad;
 
 const styles = StyleSheet.create({
   container: {
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     width: 100,
     borderRadius: 200,
     position: "absolute",
-    backgroundColor: "#AAA9AD",
+    backgroundColor: "#ffffee",
   },
   text: {
     fontSize: 10,
